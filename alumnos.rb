@@ -45,13 +45,11 @@ while num != 4
 		file = File.open('archivo.csv', 'r')
 	  contents = file.readlines
 	  file.close
-	  ausencia = " A"
-	  ausencia_o = " A\n"
 	  sum = 0
 		  contents.each do |e|
-				new_c  = e.split(",")
+				new_c  = e.split(", ")
 				new_c.map do |a|
-					if ausencia == a || ausencia_o == a
+					if a == "A" || a == "A\n"
 	  				sum += 1
 	  			end
 				end
